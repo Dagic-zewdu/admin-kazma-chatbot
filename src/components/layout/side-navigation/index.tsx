@@ -2,9 +2,10 @@ import Sider from "antd/es/layout/Sider";
 import { SideNavigationProps } from "./model";
 import { Menu } from "antd";
 import {
-  AppstoreAddOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
+  MessageOutlined,
+  ImportOutlined,
+  FileOutlined,
+  FileAddOutlined,
 } from "@ant-design/icons";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -62,22 +63,22 @@ function SideNavigation({ collapsed, setCollapsed }: SideNavigationProps) {
         items={[
           {
             key: "docs",
-            icon: <UserOutlined />,
+            icon: <FileOutlined />,
             label: "All documents",
           },
           {
             key: "add-document",
-            icon: <VideoCameraOutlined />,
+            icon: <FileAddOutlined />,
             label: "Add Documents",
           },
           {
             key: "chats",
-            icon: <AppstoreAddOutlined />,
+            icon: <MessageOutlined />,
             label: "chats",
           },
           {
             key: "import-document",
-            icon: <AppstoreAddOutlined />,
+            icon: <ImportOutlined />,
             label: "Import  Document",
           }
         ]}
